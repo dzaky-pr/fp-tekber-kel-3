@@ -5,6 +5,7 @@ class HistoryListItem extends StatelessWidget {
   final String details;
   final String address;
   final String status;
+  final String buttonText;
 
   const HistoryListItem({
     super.key,
@@ -12,6 +13,7 @@ class HistoryListItem extends StatelessWidget {
     required this.details,
     required this.address,
     required this.status,
+    required this.buttonText,
   });
 
   @override
@@ -33,6 +35,17 @@ class HistoryListItem extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: Text(
+              status,
+              style: const TextStyle(
+                fontSize: 14,
+                color: Colors.green,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
           Text(
             date,
             style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -45,17 +58,11 @@ class HistoryListItem extends StatelessWidget {
             style: const TextStyle(fontSize: 14, color: Colors.grey),
           ),
           const SizedBox(height: 16),
-          Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              status,
-              style: const TextStyle(
-                fontSize: 14,
-                color: Colors.green,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(buttonText),
           ),
+          const SizedBox(height: 16),
         ],
       ),
     );

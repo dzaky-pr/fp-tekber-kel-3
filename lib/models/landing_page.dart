@@ -1,13 +1,3 @@
-// class PickupHistory {
-//   final String timeTitle;
-//   final String jenisSampah;
-
-//   PickupHistory({
-//     required this.timeTitle,
-//     required this.jenisSampah,
-//   });
-// }
-
 class JadwalAngkutSampah {
   final String idJadwaAngkutSampah;
   final String timeTitle;

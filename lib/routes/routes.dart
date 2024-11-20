@@ -4,5 +4,5 @@ import 'package:fp_tekber/screens/pickup_screens.dart';
 
 final Map<String, WidgetBuilder> appRoutes = {
   '/': (context) => const HomeScreen(),
-  '/ajukan': (context) => const PickupPage(),
+  '/ajukan-pickup': (context) => const PickupPage(),
 };
