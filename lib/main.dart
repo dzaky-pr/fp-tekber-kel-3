@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-=======
-import 'user_settings.dart'; // Import the UserSettings page
->>>>>>> 8c0dc2f7783a4557445c240b736dbc15ae0e7422
 import 'package:fp_tekber/routes/routes.dart';
 import 'package:fp_tekber/screens/not_found.dart';
 
