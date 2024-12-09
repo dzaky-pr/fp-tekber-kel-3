@@ -15,27 +15,30 @@ class PickupPage extends StatefulWidget {
 class _PickupPageState extends State<PickupPage> {
   String? selectedTimeSlot;
   String? selectedWasteType;
-  DateTime _selectedDate = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
+          elevation: 0,
           backgroundColor: white,
           centerTitle: true,
+          surfaceTintColor: Colors.transparent,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: black),
+            onPressed: () {
+              Navigator.pop(context); // Goes back to the previous screen
+            },
+          ),
           title: Padding(
             padding: const EdgeInsets.only(top: 24.0, bottom: 24.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.chevron_left_rounded,
-                        color: Colors.black, size: 24)),
                 Text(
                   'Ajukan Pickup',
-                  style: bold20,
+                  style: bold20.copyWith(color: Colors.black),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(width: 24)
@@ -106,7 +109,6 @@ class _PickupPageState extends State<PickupPage> {
                               decoration: InputDecoration(hintStyle: regular14),
                               onDateSelected: (DateTime selectedDate) {
                                 setState(() {
-                                  _selectedDate = selectedDate;
                                 });
                                 // print("Selected Date: ${_selectedDate.toLocal()}");
                               },
